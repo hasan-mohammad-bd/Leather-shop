@@ -28,6 +28,9 @@
 .selected-cart button {
     border: 0;
     padding: 10px;
+    cursor: pointer;
+
+    
 }
 
 

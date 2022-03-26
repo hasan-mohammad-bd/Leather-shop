@@ -29,6 +29,7 @@
     border: 0;
     background-color: rgb(163, 77, 77);
     color: white;
+    cursor: pointer;
     
 }
 
@@ -42,6 +43,7 @@
     border: 0;
     background-color: rgb(221, 168, 69);
     color: white;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
