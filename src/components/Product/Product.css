@@ -3,10 +3,10 @@ img{
 }
 
 .card {
-    height: 450px;
+    min-height: 500px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
-    position: relative;
     border-radius: 5px;
+    text-align: center;
 }
 
 .img-holder {
@@ -14,20 +14,20 @@ img{
 }
 
 .card button {
+    margin:0;
     width: 100%;
     display: flex;
+    padding: 10px 20px;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 0;
     border: 0;
     background-color: rgb(255, 193, 78);
-    transition: all 0.5 ease-in;
-    border-radius: 0 0 5px 5px;
+    transition: all 0.3s ease-in;
 }
 
 .card button:hover{
     background-color: orange;
+    cursor: pointer;
 }
 
 button p {
