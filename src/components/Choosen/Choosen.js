@@ -2,7 +2,6 @@ import React from "react";
 import './Choosen.css'
 
 const Choosen = (props) => {
-    console.log(props.chosen);
   const {image, name} = props.chosen;
   return (
     <div>
