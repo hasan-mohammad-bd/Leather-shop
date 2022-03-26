@@ -1,7 +1,35 @@
 .selected-cart {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+
 }
 
-img {
-    width: 50%;
+.selected-cart p{
+    padding:0 10px
 }
+
+.selected-cart .image-holder {
+    width: 70px;
+    height: 70px;
+
+}
+
+.selected-cart img {
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
+}
+
+.selected-cart button {
+    border: 0;
+    padding: 10px;
+}
+
+
+
+

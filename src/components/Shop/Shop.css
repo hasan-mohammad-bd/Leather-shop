@@ -7,5 +7,48 @@
 .product-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 50px 50px 10px;
 }
 
+.cart-container {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 800px;
+}
+
+.selected-product-container{
+    min-height: 400px;
+}
+
+
+.choose-again-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(163, 77, 77);
+    color: white;
+    
+}
+
+.choose-again-btn:hover{
+    background-color: rgb(99, 0, 0);
+}
+
+.choose1{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(221, 168, 69);
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .product-container{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .shop-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }

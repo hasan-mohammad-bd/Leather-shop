@@ -7,8 +7,8 @@ import "./Shop.css";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  let chosen;
-
+  const [chosen, setChosen] = useState([]);
+  console.log(chosen);
 
   useEffect(() => {
     fetch("product.json")
@@ -28,18 +28,28 @@ const Shop = () => {
     }
   };
 
-  //find a random card from Cart.
+  //find a random product from Cart.
   const getRandomItem = () => {
     // get random index value
     const randomIndex = Math.floor(Math.random() * cart.length);
 
     // get random item
     const item = cart[randomIndex];
-    chosen = item;
+    if (item) {
+      setChosen(item);
+    }
+  };
 
-    return chosen;
-    
- 
+  //clear the cart
+  const clearingCart = () => {
+    const emptyArray = [];
+    setCart(emptyArray);
+  };
+
+  //deleting an specific product
+  const deletingProduct = (id) => {
+    const cartAfterDelete = cart.filter((singleCart) => singleCart.id !== id);
+    setCart(cartAfterDelete);
   };
 
   return (
@@ -53,14 +63,22 @@ const Shop = () => {
           ></Product>
         ))}
       </div>
-      <div>
+      <div className="cart-container">
         <h3>Selected Products</h3>
-        {cart.map((singleCart) => (
-          <Cart singleCart={singleCart} key={singleCart.id}></Cart>
-        ))}
-        <button onClick={getRandomItem}>Choose 1 for me</button>
-        <Choosen chosen = {chosen}></Choosen>
-        <button>Choose Again</button>
+        <div className="selected-product-container">
+          {cart.map((singleCart) => (
+            <Cart
+              singleCart={singleCart}
+              key={singleCart.id}
+              deletingProduct={deletingProduct}
+            ></Cart>
+          ))}
+        </div>
+        <div className="chosen-product-container">
+          <button className="choose1" onClick={getRandomItem}>Choose 1 for me</button>
+          <Choosen chosen={chosen}></Choosen>
+        </div>
+        <button className="choose-again-btn" onClick={clearingCart}>Choose Again</button>
       </div>
     </div>
   );

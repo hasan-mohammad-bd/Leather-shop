@@ -7,11 +7,11 @@ const Product = ({ product, addToCart }) => {
   const { image, name, price } = product;
   return (
     <div>
-      <div className="cart">
+      <div className="card">
         <div className="img-holder">
           <img src={image} alt="" />
         </div>
-        <h4>{name}</h4>
+        <h3>{name}</h3>
         <h5>Price: ${price}</h5>
         <button onClick={() => addToCart(product)}>
           <p>Add To Cart</p>
