@@ -1,8 +1,12 @@
 .writing{
     text-align: left;
-    margin: 50px;
+    margin: 150px;
 }
 
 span {
     font-weight: 500;
+}
+
+.header{
+    text-align: center;
 }
